@@ -9,11 +9,14 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    {{#each css}}
+      <link rel="stylesheet" href="/css/{{this}}" />
+    {{/each}}
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">the tech blog™ </a>
+      <div class="container-fluid bg-primary">
+        <a class="navbar-brand text-light" href="#">the tech blog™ </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -36,9 +39,12 @@
             <li class="nav-item">
               <a class="nav-link" href="#">
                 {{#if loggedIn}}
-                  <button id="logout" class="btn-no-style">logout</button>
+                  <button
+                    id="logout"
+                    class="btn btn-info text-light"
+                  >log out</button>
                 {{else}}
-                  <a href="/login">Login</a>
+                  <button id="logout" class="btn btn-info text-light">log in</button>
                 {{/if}}
               </a>
             </li>
@@ -46,13 +52,15 @@
         </div>
       </div>
     </nav>
-    <header>the tech blog™</header>
+    <div class="container">
+      <h1>the tech blog™</h1>
+    </div>
 
     {{{body}}}
 
-      {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

@@ -1,0 +1,22 @@
+[
+  {
+    "username": "porkypig",
+    "email": "porky@pig.com",
+    "password": "Honk12345!"
+  },
+  {
+    "username": "piglet",
+    "email": "littlebaby@pig.com",
+    "password": "oinky123"
+  },
+  {
+    "username": "not-a-pig",
+    "email": "justaguy@pig.com",
+    "password": "oinkoinkoinkoink"
+  },
+  {
+    "username": "taytay",
+    "email": "taytay@gmail.com",
+    "password": "testingtesting123"
+  }
+]

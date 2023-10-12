@@ -1,0 +1,17 @@
+[
+  {
+    "comment_text": "I love that movie",
+    "user_id": 3,
+    "post_id": 1
+  },
+  {
+    "comment_text": "Woah there, you sounds like a horse 😂",
+    "user_id": 1,
+    "post_id": 3
+  },
+  {
+    "comment_text": "I disagree completely.",
+    "user_id": 2,
+    "post_id": 2
+  }
+]
