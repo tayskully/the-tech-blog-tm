@@ -1,8 +1,21 @@
 const router = require("express").Router();
-const { Post } = require("../../models");
+const { Post, User } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // routes for api/posts/
+
+router.get("/", async (req, res) => {
+  try {
+    const postData = await Post.findAll({
+      include: [User],
+    });
+    const posts = postData.map((post) => post.get({ plain: true }));
+    res.status(200).json(posts);
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.post('/', withAuth, async (req, res) => {
     try {
