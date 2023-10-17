@@ -4,7 +4,7 @@
       {{! loop over posts and display all }}
       {{#each posts as |blogPosts|}}
         <div class="card text-bg-light mb-3">
-
+{{!-- hidden input to grab ID --}}
           <div class="card-header bg-info"><a
               href="posts/post/{{{blogPosts.id}}}"
               class="text-dark text-decoration-none fs-3"
@@ -18,6 +18,10 @@
             {{{blogPosts.content}}}
           </p>
         </div>
+        <button class="btn btn-primary">Edit Post</button>
+        <button class="btn btn-danger">Delete</button>
+        {{!-- add edit and delete buttons --}}
+        {{!-- create new post button  --}}
       {{/each}}
     </div>
   </div>
