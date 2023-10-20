@@ -4,7 +4,7 @@
       {{! loop over posts and display all }}
       {{#each posts as |blogPosts|}}
         <div class="card text-bg-light mb-3">
-{{!-- hidden input to grab ID --}}
+          {{! hidden input to grab ID }}
           <div class="card-header bg-info"><a
               href="posts/post/{{{blogPosts.id}}}"
               class="text-dark text-decoration-none fs-3"
@@ -18,11 +18,33 @@
             {{{blogPosts.content}}}
           </p>
         </div>
-        <button class="btn btn-primary">Edit Post</button>
-        <button class="btn btn-danger">Delete</button>
-        {{!-- add edit and delete buttons --}}
-        {{!-- create new post button  --}}
+        <button class="btn btn-primary" id="edit">edit post</button>
+        <button class="btn btn-danger" id="delete">delete</button>
+
       {{/each}}
     </div>
   </div>
 </section>
+<section id="post-form">
+  <div class="col-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="title"
+      aria-label="title"
+    />
+  </div>
+  <div class="input-group">
+    <span class="input-group-text">What are your thoughts?</span>
+    <textarea class="form-control" aria-label="With textarea"></textarea>
+  </div>
+</section>
+
+<aside>
+  <button
+    class="btn btn-light float-end fs-1 focus-ring py-1 px-2 mx-3"
+    id="add-post"
+  >+ add post</button>
+</aside>
+
+<script src="/js/dashboard.js"></script>
